@@ -1,0 +1,268 @@
+@import url(open-sans.css);
+
+* {
+    outline: none !important;
+}
+
+body {
+    font-family: 'IRANSans';
+    overflow-x: hidden;
+    font-size: 13px;
+    color: #323232;
+    font-weight: 400;
+    position: relative;
+}
+
+* {
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+    font-size: inherit;
+}
+
+a, .btn, button {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+[class*='-icon'] {
+    display: inline-block;
+    background: no-repeat scroll center transparent;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+
+.dark-red {
+    color: #c00 !important;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 30px;
+}
+
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav > li {
+    padding: 0 15px;
+}
+
+.navbar-nav > li > a {
+    color: #fff;
+    position: relative;
+}
+
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover,
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:active,
+.navbar-nav > li > a:focus {
+    color: #5bb45c !important;
+    background-color: transparent !important;
+}
+
+.navbar-nav > li > a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    background-color: #5bb45c;
+    height: 3px;
+    width: 0;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+    transform: translateX(-50%);
+}
+
+.navbar-nav > li > a:hover:after,
+.navbar-nav > li > a:active:after,
+.navbar-nav > li > a:focus:after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    display: inline-block;
+    padding: 16px;
+}
+
+.line-icon {
+    display: inline-block;
+    width: 4px;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #999;
+}
+
+.dark-red .line-icon {
+    background-color: #c00;
+}
+
+.bold{
+    font-weight: bold !important;
+}
+
+.bars-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.bars-icon:before,
+.bars-icon:after,
+.bars-icon {
+    width: 35px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: all 0.3s linear;
+}
+
+.navbar-toggler:hover .bars-icon:before,
+.navbar-toggler:hover .bars-icon:after,
+.navbar-toggler:hover .bars-icon {
+    background-color: #5bb45c;
+}
+
+.bars-icon:before,
+.bars-icon:after {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.bars-icon:before {
+    top: -7px;
+}
+
+.bars-icon:after {
+    bottom: -7px;
+}
+
+main section {
+    min-height: 100vh;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider .owl-dots {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0;
+}
+
+.project-intro {
+    background-color: #eee;
+}
+
+.project-intro .top-bar-info {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    margin-top: -35px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-intro .top-bar-info--inner {
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    height: 70px;
+    position: relative;
+    z-index: 2;
+    border-radius: 15px 50px 50px 15px;
+}
+
+.project-intro .top-bar-info--ring {
+    position: absolute;
+    background-color: #c00;
+    display: inline-block;
+    overflow: hidden;
+    height: 86px;
+    width: 86px;
+    z-index: 1;
+    border-radius: 50%;
+    right: -8px;
+    top: -8px;
+}
+
+.project-intro .top-bar-info--cols {
+    display: inline-block;
+    height: 100%;
+    width: calc(100% - 100px);
+}
+
+.project-intro .top-bar-info--cols-inner {
+    display: table;
+    width: 100%;
+}
+
+.project-intro .top-bar-info_cell {
+    display: table-cell;
+    height: 100%;
+    padding: 15px;
+    line-height: 20px;
+    position: relative;
+}
+
+.project-intro .top-bar-info_cell i{
+    position: absolute;
+    right: 0;
+}
+
+.project-intro .top-bar-info_cell .line-icon{
+    height: calc(100% - 30px);
+}
+.project-intro .top-bar-info_cell span{
+    font-size: 1.7rem;
+    display: block;
+    white-space: nowrap;
+}
+
+.project-intro .top-bar-info--btn {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-color: #5bb45c;
+    vertical-align: middle;
+}
+
+.project-intro .top-bar-info_btn {
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+    height: auto;
+    display: inline-block;
+    line-height: 16px;
+}
