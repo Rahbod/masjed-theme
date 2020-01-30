@@ -73,7 +73,9 @@ header {
     padding: 0 15px;
 }
 
+.navbar-nav > li > a:focus,
 .navbar-nav > li > a {
+    background-color: transparent;
     color: #fff;
     position: relative;
 }
@@ -82,12 +84,12 @@ header {
 .nav .open > a:focus,
 .nav .open > a:hover,
 .navbar-nav > li > a:hover,
-.navbar-nav > li > a:active,
-.navbar-nav > li > a:focus {
+.navbar-nav > li > a:active {
     color: #5bb45c !important;
     background-color: transparent !important;
 }
 
+.navbar-nav > li > a:focus:after,
 .navbar-nav > li > a:after {
     content: "";
     position: absolute;
@@ -124,7 +126,7 @@ header {
     background-color: #c00;
 }
 
-.bold{
+.bold {
     font-weight: bold !important;
 }
 
@@ -191,6 +193,11 @@ main section {
     margin-top: -35px;
     position: relative;
     z-index: 1;
+    float: right;
+}
+
+.project-intro .top-bar-info .top-bar-info__body {
+    position: relative;
 }
 
 .project-intro .top-bar-info--inner {
@@ -235,15 +242,16 @@ main section {
     position: relative;
 }
 
-.project-intro .top-bar-info_cell i{
+.project-intro .top-bar-info_cell i {
     position: absolute;
     right: 0;
 }
 
-.project-intro .top-bar-info_cell .line-icon{
+.project-intro .top-bar-info_cell .line-icon {
     height: calc(100% - 30px);
 }
-.project-intro .top-bar-info_cell span{
+
+.project-intro .top-bar-info_cell span {
     font-size: 1.7rem;
     display: block;
     white-space: nowrap;
@@ -265,4 +273,118 @@ main section {
     height: auto;
     display: inline-block;
     line-height: 16px;
+}
+
+.project-intro .body-info {
+    background-color: #9d9d9d;
+    display: table;
+    min-height: 100vh;
+    margin-top: -35px;
+    width: 100%;
+    float: right;
+}
+
+.project-intro .right-side {
+    display: table-cell;
+    width: 40vw;
+    padding: 10vh 50px 10vh 0;
+    position: relative;
+}
+
+.project-intro .right-side:before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #777;
+    display: block;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+
+.project-intro .right-side small {
+    font-size: 1.2rem;
+    display: inline-block;
+    position: relative;
+}
+
+.project-intro .left-side {
+    padding: 10vh 5%;
+    display: table-cell;
+    width: 60vw;
+}
+
+.project-intro .right-side--header {
+    padding: 0 50px;
+    margin-bottom: 30px;
+}
+
+.project-intro .right-side--header h3 {
+    position: relative;
+    font-size: 4rem;
+    white-space: pre-line;
+    padding-bottom: 10px;
+}
+
+.project-intro .right-side--header h3 b {
+    font-size: inherit;
+    white-space: nowrap;
+}
+
+.project-intro .right-side--header h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #5bb45c;
+}
+
+.project-intro .right-side--header h3 small {
+    color: #777;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.project-intro .right-side--menu {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+}
+
+.project-intro .right-side--menu b {
+    color: #111;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.project-intro .right-side--menu small {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.project-intro .right-side--menu li {
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 4px;
+}
+
+.project-intro .right-side--menu li:hover {
+    background-color: #eee;
+}
+
+.project-intro .right-side--menu li.active {
+    background-color: #5bb45c;
+}
+
+.project-intro .left-side img {
+    height: 50vh;
+    overflow: hidden;
 }
