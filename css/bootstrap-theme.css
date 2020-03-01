@@ -277,11 +277,17 @@ main section {
 
 .project-intro .body-info {
     background-color: #9d9d9d;
-    display: table;
+    display: flex;
     min-height: 100vh;
     margin-top: -35px;
     width: 100%;
     float: right;
+}
+
+.project-intro .right-side,
+.project-intro .left-side {
+    float: right;
+    vertical-align: top;
 }
 
 .project-intro .right-side {
@@ -353,6 +359,10 @@ main section {
     padding: 0;
 }
 
+.project-intro .right-side--menu > li > a {
+    display: flex;
+}
+
 .project-intro .right-side--menu b {
     color: #111;
     font-size: 1.5rem;
@@ -378,6 +388,12 @@ main section {
 
 .project-intro .right-side--menu li.active {
     background-color: #5bb45c;
+    color: #fff;
+}
+
+.project-intro .right-side--menu li.active b,
+.project-intro .right-side--menu li.active small {
+    color: #fff;
 }
 
 .project-intro .right-side--menu__icon-arrow {
@@ -418,13 +434,13 @@ main section {
 .project-intro .left-side--info {
     display: inline-block;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 30px;
     padding: 50px;
     width: 40%;
-    height: 50vh;
     left: 10%;
-    top: 10vh;
+    top: 20vh;
+    bottom: 12vh;
     overflow: hidden;
 }
 
@@ -465,11 +481,14 @@ main section {
     display: inline-block;
     height: 54px;
     line-height: 24px;
-    padding: 15px 50px;
-    border-radius: 4px;
+    padding: 15px 30px 15px 70px;
+    border-radius: 0 15px 15px 4px;
     color: #fff;
     font-size: 2rem;
-    font-weight: bold;
+}
+
+.project-intro .left-side--btn__btn-donate * {
+    font-size: inherit;
 }
 
 .project-intro .left-side--btn__btn-donate:hover {
@@ -497,13 +516,44 @@ main section {
 }
 
 .project-intro .left-side--image {
-    width: 80%;
+    width: 85%;
     height: 50vh;
     border-radius: 40px;
     overflow: hidden;
     display: block;
+    margin-bottom: 10vh;
 }
 
-.project-intro .left-side--image img{
+.project-intro .left-side--image img {
     object-fit: cover;
+}
+
+.project-intro .left-side--btn {
+    margin-bottom: 3vh;
+}
+
+.project-intro .left-side--btn__btn-more {
+    background-color: #008439;
+    position: relative;
+    display: inline-block;
+    height: 54px;
+    line-height: 20px;
+    padding: 8px 30px 10px 70px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    white-space: pre-line;
+}
+
+.project-intro .left-side--btn__btn-more:after {
+    content: "";
+    background: url(../svg/left-w.svg) no-repeat scroll center transparent;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    top: 50%;
+    left: 10px;
+    position: absolute;
+    margin-top: -15px;
 }
