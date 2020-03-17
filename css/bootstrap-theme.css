@@ -284,17 +284,17 @@ main section {
     float: right;
 }
 
-.project-intro .right-side,
-.project-intro .left-side {
+.right-side,
+.left-side {
     float: right;
     vertical-align: top;
+    display: inline-block;
+    position: relative;
 }
 
 .project-intro .right-side {
-    display: inline-block;
     width: 40vw;
     padding: 10vh 50px 10vh 0;
-    position: relative;
 }
 
 .project-intro .right-side:before {
@@ -312,43 +312,44 @@ main section {
 }
 
 
-.project-intro .right-side small {
+.right-side small {
     font-size: 1.2rem;
     display: inline-block;
     position: relative;
 }
 
-.project-intro .right-side--header {
+.right-side--header {
     padding: 0 50px;
     margin-bottom: 30px;
 }
 
-.project-intro .right-side--header h3 {
+.right-side--header h3 {
     position: relative;
-    font-size: 4rem;
+    font-size: 3.6rem;
     white-space: pre-line;
     padding-bottom: 10px;
+    font-weight: 300;
 }
 
-.project-intro .right-side--header h3 b {
-    font-size: inherit;
+.right-side--header h3 b {
     white-space: nowrap;
+    font-size: 4rem;
 }
 
-.project-intro .right-side--header h3:after {
+.right-side--header h3:after {
     content: "";
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 40%;
+    width: 150px;
     height: 4px;
     border-radius: 50px;
     background-color: #5bb45c;
 }
 
-.project-intro .right-side--header h3 small {
+.right-side--header small {
     color: #777;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-weight: 400;
 }
 
@@ -556,4 +557,36 @@ main section {
     left: 10px;
     position: absolute;
     margin-top: -15px;
+}
+
+
+.contact-us .body-info {
+    background-color: #2B8ACE;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    float: right;
+}
+
+.contact-us .right-side {
+    display: inline-block;
+    width: 45vw;
+    padding: 10vh 50px 10vh 0;
+    position: relative;
+}
+
+.contact-us .left-side {
+    padding: 10vh 10%;
+    display: inline-block;
+    width: 55vw;
+    position: relative;
+}
+
+
+.text-white {
+    color: #fff !important;
+}
+
+h3.underline-black:after {
+    background-color: #242021;
 }
