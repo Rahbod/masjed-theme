@@ -19,7 +19,7 @@ $(function () {
         $(this).dateFormat();
     });
 
-    if($.fn.datepicker) {
+    if ($.fn.datepicker) {
         $(".datepicker").each(function () {
             var options = $(this).data('datepicker');
             $(this).datepicker(options);
@@ -28,35 +28,41 @@ $(function () {
 
 
     // $(window).on("load resize scroll", function () {
-        $(".owl-carousel").each(function () {
-            var options = $(this).data(),
-                allOptions = $(this).data('owlcarousel');
-            delete options.owlcarousel;
+    $(".owl-carousel").each(function () {
+        var options = $(this).data(),
+            allOptions = $(this).data('owlcarousel');
+        delete options.owlcarousel;
 
-            if (typeof allOptions === "string" && allOptions.indexOf("js:") !== -1)
-                allOptions = JSON.parse(allOptions.substr(3));
+        if (typeof allOptions === "string" && allOptions.indexOf("js:") !== -1)
+            allOptions = JSON.parse(allOptions.substr(3));
 
-            if (typeof options.autoheight !== undefined) {
-                options.autoHeight = true;
-                delete options.autoheight;
-            }
+        if (typeof options.autoheight !== undefined) {
+            options.autoHeight = true;
+            delete options.autoheight;
+        }
 
-            // if (typeof options.autoplayspeed !== undefined) {
-            //     options.autoPlaySpeed = options.autoplayspeed;
-            //     options.autoplay = true;
-            //     delete options.autoplayspeed;
-            // }
+        // if (typeof options.autoplayspeed !== undefined) {
+        //     options.autoPlaySpeed = options.autoplayspeed;
+        //     options.autoplay = true;
+        //     delete options.autoplayspeed;
+        // }
 
-            if ($(this).hasClass('news-carousel') || $(this).hasClass('header-slider'))
-                options['navText'] = ["<i class='icon icon-chevron-right'></i>", "<i class='icon icon-chevron-left'></i>"];
+        if ($(this).hasClass('news-carousel') || $(this).hasClass('header-slider'))
+            options['navText'] = ["<i class='icon icon-chevron-right'></i>", "<i class='icon icon-chevron-left'></i>"];
+        else {
+            if (typeof options.rtl !== undefined && options.rtl == true)
+                options['navText'] = ["<i class='svg-arrow-left'></i>", "<i class='svg-arrow-right'></i>"];
             else
-                options['navText'] = ["<i class='fa-icon-angle-left'></i>", "<i class='fa-icon-angle-right'></i>"];
+                options['navText'] = ["<i class='svg-arrow-right'></i>", "<i class='svg-arrow-left'></i>"];
+        }
 
-            if(typeof allOptions !== undefined)
-                options = $.extend(options, allOptions);
+        options['lazyLoad'] = false;
 
-            $(this).owlCarousel(options);
-        });
+        if (typeof allOptions !== undefined)
+            options = $.extend(options, allOptions);
+
+        $(this).owlCarousel(options);
+    });
     // });
 
     // $(".news-carousel").css({right: $(".container").offset().left + 15, width: $(".container").width()});
@@ -83,8 +89,8 @@ $(function () {
         else
             $('header').removeClass('shadow');
 
-        if($(window).width() < 768){
-            if($(".content-body, #news-list").length) {
+        if ($(window).width() < 768) {
+            if ($(".content-body, #news-list").length) {
                 contentBodyH = $(".content-body, #news-list").offset().top + $(".content-body, #news-list").height();
                 if ($(this).scrollTop() > $(".content-header").height())
                     $('body').addClass('scroll');
@@ -99,7 +105,6 @@ $(function () {
         }
 
     });
-
 
     $("body").on("mouseover", "li.dropdown", function () {
         $(this).addClass("open");
@@ -153,6 +158,18 @@ $(function () {
         //     nicescrolls.push({id: $(this).attr('id'), instance: instance});
         // });
     });
+
+    //$(".content").onepage_scroll({
+    //    sectionContainer: "section",
+    //    easing: "ease",
+    //    animationTime: 1000,
+    //    pagination: true,
+    //    updateURL: false,
+    //    loop: false,
+    //    keyboard: true,
+    //    responsiveFallback: false,
+    //    direction: "vertical"
+    //});
 });
 // hide or show the main navbar base on page scroll : start
 // var header_height = $('header').height();
@@ -203,13 +220,13 @@ $.fn.digitFormat = function () {
         $(this).val(function (index, value) {
             if (parseInt(value) === 0)
                 return value;
-            else if (value.indexOf(".") >=0) {
+            else if (value.indexOf(".") >= 0) {
                 return value;
                 var arr = value.split('.');
                 console.log(arr);
                 value = arr[0]
-                    .replace(/\D/g, "")
-                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"."+arr[1];
+                        .replace(/\D/g, "")
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "." + arr[1];
                 return value;
             }
             return value
