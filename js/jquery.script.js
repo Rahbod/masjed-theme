@@ -26,7 +26,6 @@ $(function () {
         });
     }
 
-
     // $(window).on("load resize scroll", function () {
     $(".owl-carousel").each(function () {
         var options = $(this).data(),
@@ -159,17 +158,19 @@ $(function () {
         // });
     });
 
-    //$(".content").onepage_scroll({
-    //    sectionContainer: "section",
-    //    easing: "ease",
-    //    animationTime: 1000,
-    //    pagination: true,
-    //    updateURL: false,
-    //    loop: false,
-    //    keyboard: true,
-    //    responsiveFallback: false,
-    //    direction: "vertical"
-    //});
+    $(".content").onepage_scroll({
+        sectionContainer: "section",
+        easing: "ease",
+        animationTime: 1000,
+        pagination: true,
+        updateURL: false,
+        loop: false,
+        keyboard: true,
+        responsiveFallback: false,
+        direction: "vertical"
+    });
+
+    makeHelpBox();
 });
 // hide or show the main navbar base on page scroll : start
 // var header_height = $('header').height();
@@ -255,3 +256,27 @@ $.fn.dateFormat = function () {
         });
     });
 };
+
+function makeHelpBox() {
+    var helpBoxColumns = {first: [], second: [], third: []},
+        i = 0,
+        helpContainer = $('.help-container');
+    helpContainer.find('.help-content .help-item').each(function (index) {
+        if (i == 0)
+            helpBoxColumns.first.push($(this).html());
+        else if (i == 1)
+            helpBoxColumns.second.push($(this).html());
+        else if (i == 2)
+            helpBoxColumns.third.push($(this).html());
+
+        if (i < 2)
+            i++;
+        else
+            i = 0;
+    });
+
+    helpContainer.find('.help-content').html('');
+    helpContainer.find('.help-content').append('<div class="col-lg-4 col-md-4 col-sm-4 help-column first"><div class="help-item">' + helpBoxColumns.first.join('</div><div class="help-item">') + '</div></div>');
+    helpContainer.find('.help-content').append('<div class="col-lg-4 col-md-4 col-sm-4 help-column second"><div class="help-item">' + helpBoxColumns.second.join('</div><div class="help-item">') + '</div></div>');
+    helpContainer.find('.help-content').append('<div class="col-lg-4 col-md-4 col-sm-4 help-column third"><div class="help-item">' + helpBoxColumns.third.join('</div><div class="help-item">') + '</div></div>');
+}
