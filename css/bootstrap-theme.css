@@ -1058,11 +1058,13 @@ h3.underline-black:after {
     overflow: hidden;
     margin: 0;
     line-height: 20px;
+    font-size: 16px;
 }
 
 .video-gallery .video-slider .video-item .caption h5 small {
     display: block;
     margin-top: 5px;
+    font-size: 85%;
 }
 
 .video-gallery .video-slider .video-item .caption i {
@@ -1290,6 +1292,7 @@ h3.underline-black:after {
 .time-line .time-line-item .text {
     margin-top: 10px;
     opacity: 0;
+    font-size: 16px;
 }
 
 .time-line .time-line-item.doing .text {
@@ -1356,11 +1359,11 @@ h3.underline-black:after {
 }
 
 .time-line.owl-theme .owl-nav .owl-prev {
-    left: 0;
+    right: 0;
 }
 
 .time-line.owl-theme .owl-nav .owl-next {
-    right: 0;
+    left: 0;
 }
 
 .time-line.owl-theme .owl-nav [class*=owl-] .svg-arrow-right,
@@ -1376,6 +1379,12 @@ h3.underline-black:after {
     float: right;
     margin-left: 15px;
     padding-left: 19px;
+}
+.time-line-text .doing h2 {
+    color: #c52828;
+}
+.time-line-text .done h2 {
+    color: #5bb45c;
 }
 
 .time-line-text h2 span {
@@ -1403,6 +1412,9 @@ h3.underline-black:after {
     border-radius: 50px;
     background-color: #c52828;
 }
+.time-line-text .done h2:after {
+    background-color: #5bb45c;
+}
 
 .time-line-text .text-container {
     overflow: hidden;
@@ -1418,10 +1430,9 @@ h3.underline-black:after {
     text-align: justify;
 }
 
-.time-line-text .btn-donate {
+.time-line-container .btn-donate {
     background-color: #c52828;
     position: relative;
-    display: inline-block;
     height: 54px;
     line-height: 24px;
     padding: 15px 30px 15px 70px;
@@ -1429,20 +1440,21 @@ h3.underline-black:after {
     color: #fff;
     font-size: 2rem;
     font-weight: 300;
-    float: left;
-    margin-left: 33px;
-    margin-top: 50px;
+    display: block;
+    width: 175px;
+    margin: 50px auto 0;
+    right: 270px;
 }
 
-.time-line-text .btn-donate * {
+.time-line-container .btn-donate * {
     font-size: inherit;
 }
 
-.time-line-text .btn-donate:hover {
+.time-line-container .btn-donate:hover {
     background-color: #e84647;
 }
 
-.time-line-text .btn-donate .left-side--btn__heart {
+.time-line-container .btn-donate .left-side--btn__heart {
     position: absolute;
     left: 0;
     transform: translateX(-46%);
@@ -1452,7 +1464,7 @@ h3.underline-black:after {
     z-index: 1;
 }
 
-.time-line-text .btn-donate .left-side--btn__heart-inner {
+.time-line-container .btn-donate .left-side--btn__heart-inner {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);

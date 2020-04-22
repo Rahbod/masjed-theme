@@ -577,7 +577,7 @@
             </div>
             <div class="bg"></div>
             <div class="time-line-container">
-                <div class="time-line owl-carousel owl-theme" data-items="5" data-rtl="true" data-dots="false"
+                <div class="time-line owl-carousel owl-theme" data-items="5" data-rtl="ltr" data-dots="false"
                      data-nav="true">
                     <div class="time-line-item todo">
                         <div class="circle"><i></i></div>
@@ -598,17 +598,6 @@
                             <span class="red"><b>$ 200.000</b> المبلغ المطلوب</span>
                             <span class="gray"><b>$ 180.000</b> قدمت حتى الآن</span>
                         </div>
-                        <a href="#time-3" data-toggle="tab" class="time-line-text-trigger"></a>
-                    </div>
-                    <div class="time-line-item done">
-                        <div class="date">
-                            <b>1440</b>
-                            <span>17 صفر</span>
-                        </div>
-                        <div class="circle"><i></i></div>
-                        <div class="text">
-                            <span class="gray"><b>$ 180.000</b> قدمت حتى الآن</span>
-                        </div>
                         <a href="#time-1" data-toggle="tab" class="time-line-text-trigger"></a>
                     </div>
                     <div class="time-line-item done">
@@ -621,6 +610,17 @@
                             <span class="gray"><b>$ 180.000</b> قدمت حتى الآن</span>
                         </div>
                         <a href="#time-2" data-toggle="tab" class="time-line-text-trigger"></a>
+                    </div>
+                    <div class="time-line-item done">
+                        <div class="date">
+                            <b>1440</b>
+                            <span>17 صفر</span>
+                        </div>
+                        <div class="circle"><i></i></div>
+                        <div class="text">
+                            <span class="gray"><b>$ 180.000</b> قدمت حتى الآن</span>
+                        </div>
+                        <a href="#time-3" data-toggle="tab" class="time-line-text-trigger"></a>
                     </div>
                     <div class="time-line-item done">
                         <div class="date">
@@ -657,8 +657,8 @@
                     </div>
                 </div>
                 <div class="tab-content time-line-text">
-                    <div id="time-1" class="tab-pane fade in active">
-                        <h2 class="dark-red">
+                    <div id="time-1" class="tab-pane fade in active doing">
+                        <h2>
                             <span class="num">1</span>
                             <span>المرحلة الرابعة</span>
                         </h2>
@@ -668,16 +668,10 @@
                                 تفكيك الهيكل العظمي لهذا الهيكل باعتباره الهيكل العظمي للحديد. تبلغ مساحة هذا القسم
                                 حوالي 4000 متر مربع، ويتألف من طابقين، قسمين وسريرين.
                             </div>
-                            <a href="#" class="btn-donate">
-                                <b>تبرع</b> الآن
-                                <i class="left-side--btn__heart svg-heart-r">
-                                    <i class="left-side--btn__heart-inner svg-heart-filled-r"></i>
-                                </i>
-                            </a>
                         </div>
                     </div>
-                    <div id="time-2" class="tab-pane fade">
-                        <h2 class="dark-red">
+                    <div id="time-2" class="tab-pane fade done">
+                        <h2>
                             <span class="num">2</span>
                             <span>المرحلة الرابعة</span>
                         </h2>
@@ -689,8 +683,8 @@
                             </div>
                         </div>
                     </div>
-                    <div id="time-3" class="tab-pane fade">
-                        <h2 class="dark-red">
+                    <div id="time-3" class="tab-pane fade done">
+                        <h2>
                             <span class="num">3</span>
                             <span>المرحلة الرابعة</span>
                         </h2>
@@ -703,6 +697,12 @@
                         </div>
                     </div>
                 </div>
+                <a href="#" class="btn-donate">
+                    <b>تبرع</b> الآن
+                    <i class="left-side--btn__heart svg-heart-r">
+                        <i class="left-side--btn__heart-inner svg-heart-filled-r"></i>
+                    </i>
+                </a>
             </div>
         </div>
     </section>
