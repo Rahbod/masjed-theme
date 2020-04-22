@@ -328,6 +328,10 @@ main section {
     padding: 15px;
     line-height: 20px;
     position: relative;
+    cursor: default;
+}
+.project-intro .top-bar-info_cell:hover {
+    color: #c52828;
 }
 
 .project-intro .top-bar-info_cell .info-icon {
@@ -364,7 +368,6 @@ main section {
     float: left;
     width: 100px;
     height: 100%;
-    background-color: #5bb45c;
     vertical-align: middle;
 }
 
@@ -375,8 +378,11 @@ main section {
     height: auto;
     display: inline-block;
     line-height: 16px;
-    margin: 19px 0;
-    padding: 0 15px;
+    padding: 19px 15px;
+    background-color: #5bb45c;
+}
+.project-intro .top-bar-info_btn:hover {
+    background-color: #008439;
 }
 
 .project-intro .body-info {
@@ -427,7 +433,7 @@ main section {
 
 .right-side--header h3 {
     position: relative;
-    font-size: 3.6rem;
+    font-size: 3.3rem;
     white-space: pre-line;
     padding-bottom: 10px;
     font-weight: 300;
@@ -435,7 +441,7 @@ main section {
 
 .right-side--header h3 b {
     white-space: nowrap;
-    font-size: 3.7rem;
+    font-size: 3.4rem;
 }
 
 .right-side--header h3:after {
@@ -451,7 +457,7 @@ main section {
 
 .right-side--header small {
     color: #939393;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
@@ -675,6 +681,9 @@ main section {
     font-size: 1.5rem;
     white-space: pre-line;
 }
+.project-intro .left-side--btn__btn-more:hover {
+    background-color: #5bb45c;
+}
 
 .project-intro .left-side--btn__btn-more:after {
     content: "";
@@ -732,11 +741,11 @@ main section {
     color: #2B8ACE;
     border-radius: 50%;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
     font-family: "Open Sans";
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
     text-align: center;
     vertical-align: middle;
@@ -746,7 +755,7 @@ main section {
     margin: 0 15px 0 0;
     display: inline-block;
     vertical-align: middle;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -759,7 +768,7 @@ main section {
     font-family: "Open Sans";
     direction: ltr;
     float: left;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 30px;
     font-weight: lighter;
     text-align: left;
@@ -811,7 +820,7 @@ main section {
     position: absolute;
     right: 100px;
     bottom: 10vh;
-    width: 300px;
+    width: 350px;
     color: #fff;
     text-align: justify;
     padding-right: 70px;
