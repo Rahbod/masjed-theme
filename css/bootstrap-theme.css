@@ -328,6 +328,10 @@ main section {
     padding: 15px;
     line-height: 20px;
     position: relative;
+    cursor: default;
+}
+.project-intro .top-bar-info_cell:hover {
+    color: #c52828;
 }
 
 .project-intro .top-bar-info_cell .info-icon {
@@ -364,7 +368,6 @@ main section {
     float: left;
     width: 100px;
     height: 100%;
-    background-color: #5bb45c;
     vertical-align: middle;
 }
 
@@ -375,8 +378,11 @@ main section {
     height: auto;
     display: inline-block;
     line-height: 16px;
-    margin: 19px 0;
-    padding: 0 15px;
+    padding: 19px 15px;
+    background-color: #5bb45c;
+}
+.project-intro .top-bar-info_btn:hover {
+    background-color: #008439;
 }
 
 .project-intro .body-info {
@@ -427,7 +433,7 @@ main section {
 
 .right-side--header h3 {
     position: relative;
-    font-size: 3.6rem;
+    font-size: 3.3rem;
     white-space: pre-line;
     padding-bottom: 10px;
     font-weight: 300;
@@ -435,7 +441,7 @@ main section {
 
 .right-side--header h3 b {
     white-space: nowrap;
-    font-size: 3.7rem;
+    font-size: 3.4rem;
 }
 
 .right-side--header h3:after {
@@ -451,7 +457,7 @@ main section {
 
 .right-side--header small {
     color: #939393;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
@@ -675,6 +681,9 @@ main section {
     font-size: 1.5rem;
     white-space: pre-line;
 }
+.project-intro .left-side--btn__btn-more:hover {
+    background-color: #5bb45c;
+}
 
 .project-intro .left-side--btn__btn-more:after {
     content: "";
@@ -732,11 +741,11 @@ main section {
     color: #2B8ACE;
     border-radius: 50%;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
     font-family: "Open Sans";
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
     text-align: center;
     vertical-align: middle;
@@ -746,7 +755,7 @@ main section {
     margin: 0 15px 0 0;
     display: inline-block;
     vertical-align: middle;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -759,7 +768,7 @@ main section {
     font-family: "Open Sans";
     direction: ltr;
     float: left;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 30px;
     font-weight: lighter;
     text-align: left;
@@ -811,7 +820,7 @@ main section {
     position: absolute;
     right: 100px;
     bottom: 10vh;
-    width: 300px;
+    width: 350px;
     color: #fff;
     text-align: justify;
     padding-right: 70px;
@@ -1049,11 +1058,13 @@ h3.underline-black:after {
     overflow: hidden;
     margin: 0;
     line-height: 20px;
+    font-size: 16px;
 }
 
 .video-gallery .video-slider .video-item .caption h5 small {
     display: block;
     margin-top: 5px;
+    font-size: 85%;
 }
 
 .video-gallery .video-slider .video-item .caption i {
@@ -1281,6 +1292,7 @@ h3.underline-black:after {
 .time-line .time-line-item .text {
     margin-top: 10px;
     opacity: 0;
+    font-size: 16px;
 }
 
 .time-line .time-line-item.doing .text {
@@ -1347,11 +1359,11 @@ h3.underline-black:after {
 }
 
 .time-line.owl-theme .owl-nav .owl-prev {
-    left: 0;
+    right: 0;
 }
 
 .time-line.owl-theme .owl-nav .owl-next {
-    right: 0;
+    left: 0;
 }
 
 .time-line.owl-theme .owl-nav [class*=owl-] .svg-arrow-right,
@@ -1367,6 +1379,12 @@ h3.underline-black:after {
     float: right;
     margin-left: 15px;
     padding-left: 19px;
+}
+.time-line-text .doing h2 {
+    color: #c52828;
+}
+.time-line-text .done h2 {
+    color: #5bb45c;
 }
 
 .time-line-text h2 span {
@@ -1394,6 +1412,9 @@ h3.underline-black:after {
     border-radius: 50px;
     background-color: #c52828;
 }
+.time-line-text .done h2:after {
+    background-color: #5bb45c;
+}
 
 .time-line-text .text-container {
     overflow: hidden;
@@ -1409,10 +1430,9 @@ h3.underline-black:after {
     text-align: justify;
 }
 
-.time-line-text .btn-donate {
+.time-line-container .btn-donate {
     background-color: #c52828;
     position: relative;
-    display: inline-block;
     height: 54px;
     line-height: 24px;
     padding: 15px 30px 15px 70px;
@@ -1420,20 +1440,21 @@ h3.underline-black:after {
     color: #fff;
     font-size: 2rem;
     font-weight: 300;
-    float: left;
-    margin-left: 33px;
-    margin-top: 50px;
+    display: block;
+    width: 175px;
+    margin: 50px auto 0;
+    right: 270px;
 }
 
-.time-line-text .btn-donate * {
+.time-line-container .btn-donate * {
     font-size: inherit;
 }
 
-.time-line-text .btn-donate:hover {
+.time-line-container .btn-donate:hover {
     background-color: #e84647;
 }
 
-.time-line-text .btn-donate .left-side--btn__heart {
+.time-line-container .btn-donate .left-side--btn__heart {
     position: absolute;
     left: 0;
     transform: translateX(-46%);
@@ -1443,7 +1464,7 @@ h3.underline-black:after {
     z-index: 1;
 }
 
-.time-line-text .btn-donate .left-side--btn__heart-inner {
+.time-line-container .btn-donate .left-side--btn__heart-inner {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1514,6 +1535,7 @@ h3.underline-black:after {
 
 .media-gallery .media-item .caption h5 {
     font-weight: bold;
+    font-size: 18px;
     margin-top: 0;
 }
 
@@ -1526,7 +1548,8 @@ h3.underline-black:after {
 }
 
 .media-gallery .media-item .caption .text {
-    width: 60%;
+    width: 80%;
+    font-size: 16px;
 }
 
 .media-gallery .media-slider .owl-dots {

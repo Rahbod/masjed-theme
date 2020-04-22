@@ -49,7 +49,7 @@ $(function () {
         if ($(this).hasClass('news-carousel') || $(this).hasClass('header-slider'))
             options['navText'] = ["<i class='icon icon-chevron-right'></i>", "<i class='icon icon-chevron-left'></i>"];
         else {
-            if (typeof options.rtl !== undefined && options.rtl == true)
+            if (typeof options.rtl !== undefined && options.rtl === true)
                 options['navText'] = ["<i class='svg-arrow-left'></i>", "<i class='svg-arrow-right'></i>"];
             else
                 options['navText'] = ["<i class='svg-arrow-right'></i>", "<i class='svg-arrow-left'></i>"];
