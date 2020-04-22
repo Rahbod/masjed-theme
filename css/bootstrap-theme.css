@@ -330,6 +330,7 @@ main section {
     position: relative;
     cursor: default;
 }
+
 .project-intro .top-bar-info_cell:hover {
     color: #c52828;
 }
@@ -357,6 +358,10 @@ main section {
     height: calc(100% - 30px);
 }
 
+.project-intro .top-bar-info_cell:hover .line-icon {
+    background: #c52828;
+}
+
 .project-intro .top-bar-info_cell span {
     font-size: 1.6rem;
     display: block;
@@ -381,6 +386,7 @@ main section {
     padding: 19px 15px;
     background-color: #5bb45c;
 }
+
 .project-intro .top-bar-info_btn:hover {
     background-color: #008439;
 }
@@ -465,7 +471,7 @@ main section {
     list-style: none;
     position: relative;
     z-index: 1;
-    padding: 0 0 0 30px;
+    padding: 0 50px 0 30px;
 }
 
 .project-intro .right-side--menu > li > a {
@@ -681,6 +687,7 @@ main section {
     font-size: 1.5rem;
     white-space: pre-line;
 }
+
 .project-intro .left-side--btn__btn-more:hover {
     background-color: #5bb45c;
 }
@@ -874,8 +881,8 @@ h3.underline-black:after {
     position: relative;
 }
 
-.contact-form-container .contact-us-form-container,
 .about-container .about-content-container,
+.contact-form-container .contact-us-form-container,
 .news-container .news-slider,
 .media-gallery .media-gallery-container,
 .image-gallery .image-gallery-container,
@@ -886,6 +893,10 @@ h3.underline-black:after {
     left: 50px;
     right: 50px;
     transform: translateY(-50%);
+}
+
+.about-container .about-content-container {
+    top: calc(50% - 100px);
 }
 
 .image-gallery h4,
@@ -955,7 +966,7 @@ h3.underline-black:after {
 }
 
 .video-gallery .video-slider .video-item {
-    width: calc(100% - 200px);
+    width: 85%;
     display: block;
     padding: 50px 0;
 }
@@ -1013,7 +1024,7 @@ h3.underline-black:after {
 }
 
 .video-gallery .owl-theme .owl-nav .owl-prev {
-    left: 100px;
+    left: calc(15% - 100px);
 }
 
 .video-gallery .owl-theme .owl-nav .owl-next {
@@ -1030,7 +1041,7 @@ h3.underline-black:after {
 
 .video-gallery .video-slider .owl-dots {
     position: absolute;
-    left: 220px;
+    left: calc(15% + 20px);
     top: 420px;
 }
 
@@ -1108,7 +1119,7 @@ h3.underline-black:after {
 }
 
 .video-gallery .archive-link {
-    left: 200px;
+    left: 15%;
 }
 
 .image-gallery .archive-link {
@@ -1325,6 +1336,10 @@ h3.underline-black:after {
     color: #c52828;
 }
 
+.time-line .time-line-item.todo {
+    color: #777;
+}
+
 .time-line .time-line-item .gray {
     color: #cecece;
 }
@@ -1380,12 +1395,15 @@ h3.underline-black:after {
     margin-left: 15px;
     padding-left: 19px;
 }
+
 .time-line-text .doing h2 {
     color: #c52828;
 }
+
 .time-line-text .done h2 {
     color: #5bb45c;
 }
+
 .time-line-text .todo h2 {
     color: #cecece;
 }
@@ -1415,9 +1433,11 @@ h3.underline-black:after {
     border-radius: 50px;
     background-color: #c52828;
 }
+
 .time-line-text .done h2:after {
     background-color: #5bb45c;
 }
+
 .time-line-text .todo h2:after {
     background-color: #cecece;
 }
@@ -1577,6 +1597,10 @@ h3.underline-black:after {
     border-radius: 2px;
     margin-left: 2px;
     margin-right: 2px;
+}
+
+.news-container .news-slider .owl-dots .owl-dot span {
+    background: #bbb;
 }
 
 .news-container .news-slider .owl-dots .owl-dot.active span,
@@ -1855,6 +1879,8 @@ h3.underline-black:after {
     margin-top: 50px;
     margin-right: 50px;
     display: inline-block;
+    position: absolute;
+    top: 50%;
 }
 
 .about-container .attachment-link:hover {
@@ -2228,6 +2254,7 @@ h3.underline-black:after {
 .onepage-pagination li a {
     position: relative;
 }
+
 .onepage-pagination li a:before {
     width: 8px;
     height: 8px;
@@ -2235,8 +2262,9 @@ h3.underline-black:after {
     top: 6px;
     left: 6px;
 }
+
 .onepage-pagination li a.active:before {
-    border:none;
+    border: none;
     background: #39b54a;
     width: 14px;
     height: 14px;
@@ -2244,11 +2272,23 @@ h3.underline-black:after {
     left: 3px;
     margin-top: 0;
 }
-.onepage-pagination{
+
+.onepage-pagination {
     transform: translateY(-50%);
-    padding:0;
+    padding: 0;
     right: 40px;
 }
-.news-container .news-slider .owl-dots{
+
+.news-container .news-slider .owl-dots {
     top: auto;
+}
+
+.about-container .right-side .right-side--header {
+    position: absolute;
+    top: calc(50% - 100px);
+    transform: translateY(-50%);
+}
+
+.about-container .right-side--header h3 {
+    margin-top: -40px;
 }
