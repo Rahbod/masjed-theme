@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-size: 14px;
+    font-size: 16px;
     color: #393939;
     font-weight: 400;
     position: relative;
@@ -957,7 +957,6 @@ h3.underline-black:after {
 .video-gallery .video-slider .video-item {
     width: calc(100% - 200px);
     display: block;
-    margin: 0 auto;
     padding: 50px 0;
 }
 
@@ -972,7 +971,8 @@ h3.underline-black:after {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    box-shadow: -15px 15px 20px #bfbfbf;
+    box-shadow: -25px 15px 20px #bfbfbf;
+    margin-right: 1px;
 }
 
 .video-gallery .video-slider .video-item .video-overlay {
@@ -994,8 +994,8 @@ h3.underline-black:after {
 
 .video-gallery .owl-theme .owl-nav [class*=owl-] {
     position: absolute;
-    top: 50%;
-    margin: -25px 0 0;
+    top: 215px;
+    margin: 0;
     width: 50px;
     height: 50px;
     border: 1px solid #000;
@@ -1013,11 +1013,11 @@ h3.underline-black:after {
 }
 
 .video-gallery .owl-theme .owl-nav .owl-prev {
-    left: 0;
+    left: 100px;
 }
 
 .video-gallery .owl-theme .owl-nav .owl-next {
-    right: 0;
+    right: -100px;
 }
 
 .video-gallery .owl-theme .owl-nav .owl-next .svg-arrow-right,
@@ -1030,7 +1030,7 @@ h3.underline-black:after {
 
 .video-gallery .video-slider .owl-dots {
     position: absolute;
-    left: 120px;
+    left: 220px;
     top: 420px;
 }
 
@@ -1105,6 +1105,10 @@ h3.underline-black:after {
     font-size: 1.5rem;
     white-space: pre-line;
     z-index: 3;
+}
+
+.video-gallery .archive-link {
+    left: 200px;
 }
 
 .image-gallery .archive-link {
@@ -1233,10 +1237,6 @@ h3.underline-black:after {
 .time-line .time-line-item {
     text-align: right;
     position: relative;
-}
-
-.time-line .time-line-item.todo {
-    padding-top: 37px;
 }
 
 .time-line .time-line-item .date {
@@ -1386,6 +1386,9 @@ h3.underline-black:after {
 .time-line-text .done h2 {
     color: #5bb45c;
 }
+.time-line-text .todo h2 {
+    color: #cecece;
+}
 
 .time-line-text h2 span {
     font-size: 30px;
@@ -1414,6 +1417,9 @@ h3.underline-black:after {
 }
 .time-line-text .done h2:after {
     background-color: #5bb45c;
+}
+.time-line-text .todo h2:after {
+    background-color: #cecece;
 }
 
 .time-line-text .text-container {
@@ -1552,6 +1558,7 @@ h3.underline-black:after {
     font-size: 16px;
 }
 
+.news-container .news-slider .owl-dots,
 .media-gallery .media-slider .owl-dots {
     position: absolute;
     left: 120px;
@@ -1562,6 +1569,7 @@ h3.underline-black:after {
     margin-top: 0;
 }
 
+.news-container .news-slider .owl-dots .owl-dot span,
 .media-gallery .media-slider .owl-dots .owl-dot span {
     background: #fff;
     height: 4px;
@@ -1571,6 +1579,8 @@ h3.underline-black:after {
     margin-right: 2px;
 }
 
+.news-container .news-slider .owl-dots .owl-dot.active span,
+.news-container .news-slider .owl-dots .owl-dot:hover span,
 .media-gallery .media-slider .owl-dots .owl-dot.active span,
 .media-gallery .media-slider .owl-dots .owl-dot:hover span {
     background: #5bb45c;
@@ -1739,6 +1749,7 @@ h3.underline-black:after {
     margin-bottom: 34px;
     position: relative;
     line-height: 25px;
+    font-size: 26px;
 }
 
 .news-container .news-slider .news-item .info h3:after {
@@ -1748,13 +1759,14 @@ h3.underline-black:after {
     height: 4px;
     border-radius: 2px;
     background: #65b5d1;
-    top: 40px;
+    bottom: -19px;
     right: 0;
 }
 
 .news-container .news-slider .news-item .info .text {
     color: #818181;
     line-height: 25px;
+    font-size: 16px;
 }
 
 .news-container .news-slider .news-item .info .date {
@@ -2143,11 +2155,17 @@ h3.underline-black:after {
     width: 50%;
     margin-bottom: 20px;
     position: relative;
+    cursor: default;
 }
 
 .footer .report ul li > div,
 .footer .report ul li > b {
     padding-right: 14px;
+}
+
+.footer .report ul li:hover > div,
+.footer .report ul li:hover > b {
+    color: #c52828;
 }
 
 .footer .report ul li > div:before {
@@ -2160,7 +2178,7 @@ h3.underline-black:after {
     right: 0;
 }
 
-.footer .report ul li.dark-red > div:before {
+.footer .report ul li:hover > div:before {
     background: #c52828;
 }
 
@@ -2230,4 +2248,7 @@ h3.underline-black:after {
     transform: translateY(-50%);
     padding:0;
     right: 40px;
+}
+.news-container .news-slider .owl-dots{
+    top: auto;
 }
