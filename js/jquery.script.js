@@ -140,6 +140,13 @@ $(function () {
         $('#sidebar').removeClass('active');
         // hide overlay
         $('.sidebar--overlay').removeClass('active');
+    }).on('click', '.desktop-menu .close', function () {
+        $('.desktop-menu').removeClass('open').fadeOut();
+    }).on('click', '.navbar-toggler', function () {
+        $('.desktop-menu').fadeIn(function () {
+            $(this).addClass('open')
+        });
+        return false;
     });
 
     $(window).on("load resize", function () {
