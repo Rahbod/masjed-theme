@@ -71,23 +71,6 @@ $(function () {
     });
     // });
 
-    // $(".news-carousel").css({right: $(".container").offset().left + 15, width: $(".container").width()});
-    // var dotsCount = $(".owl-carousel .owl-dot").length;
-    // $(".owl-carousel .owl-dots").css("margin-left", -((dotsCount * 16 + 20) / 2));
-
-    $('.mobile-menu-trigger').on('click', function (e) {
-        e.preventDefault();
-        $('.overlay').fadeIn('fast', function () {
-            $('.menu-container .menu').addClass('open');
-        });
-    });
-
-    $('.overlay').on('click', function (e) {
-        e.preventDefault();
-        $('.menu-container .menu').removeClass('open');
-        $(this).hide();
-    });
-
     var contentBodyH;
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 10)
@@ -143,6 +126,19 @@ $(function () {
         $('.desktop-menu').removeClass('open').fadeOut();
     }).on('click', '.navbar-toggler', function () {
         $('.desktop-menu').fadeIn(function () {
+            $(this).addClass('open')
+        });
+        return false;
+    }).on('click', '.mobile-index-menu ul li a', function (e) {
+        var position = $($(this).attr('href')).offset();
+        $('.mobile-index-menu').removeClass('open').fadeOut(function () {
+            $("html, body").animate({ scrollTop: position.top }, 'slow');
+        });
+        e.preventDefault();
+    }).on('click', '.mobile-index-menu .close', function () {
+        $('.mobile-index-menu').removeClass('open').fadeOut();
+    }).on('click', '.mobile-menu-trigger', function () {
+        $('.mobile-index-menu').fadeIn(function () {
             $(this).addClass('open')
         });
         return false;
@@ -247,8 +243,8 @@ $.fn.digitFormat = function () {
                 var arr = value.split('.');
                 console.log(arr);
                 value = arr[0]
-                    .replace(/\D/g, "")
-                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "." + arr[1];
+                        .replace(/\D/g, "")
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "." + arr[1];
                 return value;
             }
             return value
@@ -310,7 +306,8 @@ function copyToClipboard(id) {
 
     /* Select the text field */
     copyText.select();
-    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+    copyText.setSelectionRange(0, 99999);
+    /*For mobile devices*/
 
     /* Copy the text inside the text field */
     document.execCommand("copy");

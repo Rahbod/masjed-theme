@@ -1194,7 +1194,7 @@ h3.underline-black:after {
     margin-right: -7px;
 }
 
-.image-gallery .image-item h5{
+.image-gallery .image-item h5 {
     margin-bottom: 0;
     color: #fff;
     margin-top: 30px;
@@ -1202,7 +1202,8 @@ h3.underline-black:after {
     font-size: 16px;
     font-weight: bold;
 }
-.image-gallery .image-item h5 small{
+
+.image-gallery .image-item h5 small {
     color: #fff;
     margin-top: 5px;
     display: block;
@@ -3189,18 +3190,21 @@ h3.underline-black:after {
     background: #fff;
 }
 
+.mobile-index-menu,
 .desktop-menu {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    z-index:61;
+    z-index: 61;
     background: #fff url('../images/desktop-menu-bg.png') no-repeat right center;
     background-size: contain;
     display: none;
 }
-.desktop-menu .close{
+
+.mobile-index-menu .close,
+.desktop-menu .close {
     position: absolute;
     right: 50px;
     top: 30px;
@@ -3208,7 +3212,9 @@ h3.underline-black:after {
     color: #4b4b4b;
     opacity: 1;
 }
-.desktop-menu ul{
+
+.mobile-index-menu ul,
+.desktop-menu ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -3217,63 +3223,90 @@ h3.underline-black:after {
     top: 50%;
     transform: translateY(-50%);
 }
-.desktop-menu ul li{
+
+.mobile-index-menu ul li,
+.desktop-menu ul li {
     position: relative;
     display: block;
     padding: 10px 0;
     right: 50px;
-    opacity:0;
+    opacity: 0;
     -webkit-transition: all 0.8s;
     -moz-transition: all 0.8s;
     -ms-transition: all 0.8s;
     -o-transition: all 0.8s;
     transition: all 0.8s;
 }
-.desktop-menu ul li:nth-child(2){
+
+.mobile-index-menu ul li:nth-child(2),
+.desktop-menu ul li:nth-child(2) {
     right: 80px;
 }
-.desktop-menu ul li:nth-child(3){
+
+.mobile-index-menu ul li:nth-child(3),
+.desktop-menu ul li:nth-child(3) {
     right: 110px;
 }
-.desktop-menu ul li:nth-child(4){
+
+.mobile-index-menu ul li:nth-child(4),
+.desktop-menu ul li:nth-child(4) {
     right: 140px;
 }
-.desktop-menu ul li:nth-child(5){
+
+.mobile-index-menu ul li:nth-child(5),
+.desktop-menu ul li:nth-child(5) {
     right: 170px;
 }
-.desktop-menu ul li:nth-child(6){
+
+.mobile-index-menu ul li:nth-child(6),
+.desktop-menu ul li:nth-child(6) {
     right: 200px;
 }
-.desktop-menu ul li:nth-child(7){
+
+.mobile-index-menu ul li:nth-child(7),
+.desktop-menu ul li:nth-child(7) {
     right: 230px;
 }
-.desktop-menu ul li:nth-child(8){
+
+.mobile-index-menu ul li:nth-child(8),
+.desktop-menu ul li:nth-child(8) {
     right: 260px;
 }
-.desktop-menu ul li:nth-child(9){
+
+.mobile-index-menu ul li:nth-child(9),
+.desktop-menu ul li:nth-child(9) {
     right: 290px;
 }
-.desktop-menu ul li:nth-child(10){
+
+.mobile-index-menu ul li:nth-child(10),
+.desktop-menu ul li:nth-child(10) {
     right: 320px;
 }
-.desktop-menu.open ul li{
+
+.mobile-index-menu.open ul li,
+.desktop-menu.open ul li {
     right: 0;
-    opacity:1;
+    opacity: 1;
 }
-.desktop-menu ul li a{
+
+.mobile-index-menu ul li a,
+.desktop-menu ul li a {
     font-size: 26px;
     color: #4b4b4b;
     position: relative;
 }
-.desktop-menu ul li a:hover{
+
+.desktop-menu ul li a:hover {
     color: #57b040;
 }
-.desktop-menu ul li a:before{
+
+.mobile-index-menu ul li a:before,
+.desktop-menu ul li a:before {
     content: '';
     position: absolute;
     bottom: -5px;
     width: 0;
-    height:4px;
+    height: 4px;
     border-radius: 2px;
     background: #57b040;
     -webkit-transition: all 0.4s;
@@ -3282,25 +3315,30 @@ h3.underline-black:after {
     -o-transition: all 0.4s;
     transition: all 0.4s;
 }
-.desktop-menu ul li a:hover:before{
+
+.mobile-index-menu ul li a:hover:before,
+.desktop-menu ul li a:hover:before {
     content: '';
     width: 100%;
 }
-.language-dropdown{
+
+.language-dropdown {
     float: left;
     position: relative;
-    z-index:3;
-    top:15px;
-    left:15px;
+    z-index: 3;
+    top: 15px;
+    left: 15px;
 }
-.language-dropdown .dropdown-toggle{
+
+.language-dropdown .dropdown-toggle {
     color: #fff;
     font-size: 14px;
     background: url("../svg/dots.svg") no-repeat right center;
     background-size: 13px;
     padding-right: 15px;
 }
-.mobile-menu-trigger{
+
+.mobile-menu-trigger {
     position: absolute;
     right: 50%;
     margin-right: -27px;
@@ -3309,4 +3347,97 @@ h3.underline-black:after {
     height: 55px;
     background: url("../svg/mobile-menu.svg") no-repeat center;
     background-size: 20px;
+}
+
+.mobile-index-menu .logo,
+.desktop-menu .logo {
+    position: absolute;
+    z-index: 2;
+    right: 200px;
+    top: 50%;
+    width: 50%;
+    height: 120px;
+    margin-top: -79px;
+}
+
+.mobile-index-menu .logo img,
+.desktop-menu .logo img {
+    float: right;
+    max-height: 100px;
+}
+
+.mobile-index-menu .logo h2,
+.desktop-menu .logo h2 {
+    margin: 0;
+    color: #393939;
+    overflow: hidden;
+    padding: 10px 32px 10px 10px;
+    height: 100px;
+    line-height: 40px;
+    position: relative;
+}
+
+.mobile-index-menu .logo h2::before,
+.desktop-menu .logo h2::before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 2px;
+    height: 80px;
+    background: #393939;
+    border-radius: 2px;
+}
+
+.mobile-index-menu .logo h2 .arabic,
+.mobile-index-menu .logo h2 .english,
+.desktop-menu .logo h2 .arabic,
+.desktop-menu .logo h2 .english {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.mobile-index-menu .logo h2 .english,
+.desktop-menu .logo h2 .english {
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.mobile-index-menu .logo h2 .arabic span,
+.mobile-index-menu .logo h2 .english span,
+.desktop-menu .logo h2 .arabic span,
+.desktop-menu .logo h2 .english span {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.mobile-index-menu .logo h2 .english span,
+.desktop-menu .logo h2 .english span {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.mobile-index-menu .title {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.mobile-index-menu ul li{
+    margin-bottom: 5px;
+}
+.mobile-index-menu ul li a{
+    width: 80%;
+    background: #fff url("../svg/left-b.svg") no-repeat 10px center;
+    background-size: 25px;
+    border-radius: 10px;
+    right: 10%;
+    text-align: right;
+    padding: 10px;
 }
