@@ -147,6 +147,8 @@ $(function () {
             $(this).addClass('open')
         });
         return false;
+    }).on('click', '.bank-accounts li', function () {
+        copyToClipboard($(this).find('.account-number input').attr('id'));
     });
 
     $(window).on("load resize", function () {
@@ -297,4 +299,19 @@ function makeHelpBox() {
         helpContainer.find('.help-content').append('<div class="col-lg-4 col-md-4 col-sm-4 help-column second"><div class="help-item">' + helpBoxColumns.second.join('</div><div class="help-item">') + '</div></div>');
         helpContainer.find('.help-content').append('<div class="col-lg-4 col-md-4 col-sm-4 help-column third"><div class="help-item">' + helpBoxColumns.third.join('</div><div class="help-item">') + '</div></div>');
     }
+}
+
+function copyToClipboard(id) {
+    /* Get the text field */
+    var copyText = document.getElementById(id);
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("The account number was copied.");
 }

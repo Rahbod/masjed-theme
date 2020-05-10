@@ -197,6 +197,7 @@ header {
 .bars-icon {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .bars-icon:before,
@@ -1191,6 +1192,21 @@ h3.underline-black:after {
 .image-gallery .image-item {
     margin-left: -7px;
     margin-right: -7px;
+}
+
+.image-gallery .image-item h5{
+    margin-bottom: 0;
+    color: #fff;
+    margin-top: 30px;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.image-gallery .image-item h5 small{
+    color: #fff;
+    margin-top: 5px;
+    display: block;
+    font-size: 85%;
 }
 
 .image-gallery .image-item div {
@@ -3179,7 +3195,7 @@ h3.underline-black:after {
     right: 0;
     width: 100%;
     height: 100%;
-    z-index:10;
+    z-index:61;
     background: #fff url('../images/desktop-menu-bg.png') no-repeat right center;
     background-size: contain;
     display: none;
@@ -3269,4 +3285,28 @@ h3.underline-black:after {
 .desktop-menu ul li a:hover:before{
     content: '';
     width: 100%;
+}
+.language-dropdown{
+    float: left;
+    position: relative;
+    z-index:3;
+    top:15px;
+    left:15px;
+}
+.language-dropdown .dropdown-toggle{
+    color: #fff;
+    font-size: 14px;
+    background: url("../svg/dots.svg") no-repeat right center;
+    background-size: 13px;
+    padding-right: 15px;
+}
+.mobile-menu-trigger{
+    position: absolute;
+    right: 50%;
+    margin-right: -27px;
+    padding: 16px;
+    width: 55px;
+    height: 55px;
+    background: url("../svg/mobile-menu.svg") no-repeat center;
+    background-size: 20px;
 }

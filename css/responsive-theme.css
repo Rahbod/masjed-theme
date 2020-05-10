@@ -1,6 +1,7 @@
 @media screen and (max-width: 767px) {
     header {
         padding-top: 0;
+        display: none;
     }
 
     header .navbar {
@@ -322,9 +323,9 @@
 
     .project-intro .left-side--btn__btn-more {
         height: 40px;
-        line-height: 20px;
+        line-height: 16px;
         border-radius: 10px;
-        padding: 0 15px 0 0;
+        padding: 4px 15px 4px 0;
         display: block;
         font-size: 14px;
         background: #e6e1de;
@@ -333,7 +334,7 @@
 
     .project-intro .left-side--btn__btn-more:after {
         width: 20px;
-        height: 35px;
+        height: 100%;
         top: 0;
         margin-top: 0;
         background: url("../svg/left-b.svg") no-repeat center;
@@ -360,7 +361,7 @@
         bottom: 0;
         right: 0;
         left: 0;
-        line-height: 25px;
+        line-height: 20px;
         font-size: 14px;
         padding: 15px 85px 15px 15px;
         background: rgba(8, 64, 104, 0.8) url("../svg/warning.svg") no-repeat calc(100% - 15px) center;
@@ -663,6 +664,7 @@
 
     .time-line-text .text {
         font-size: 12px;
+        line-height:15px;
     }
 
     .time-line-container .btn-donate {
@@ -1104,6 +1106,7 @@
         display: block;
         background: #fff;
         padding: 0 15px 15px;
+        border-radius: 0 0 10px 10px;
     }
 
     .inner-page .news-page .similar-news {
@@ -1126,7 +1129,7 @@
     }
 
     .inner-page .page-image-gallery ul li {
-        width: 100%;
+        width: 50%;
     }
 
     .inner-page .page-image-gallery ul li:after {
@@ -1143,12 +1146,90 @@
         border-radius: 10px;
         padding-bottom: 30px;
         background: #fff;
+        overflow: hidden;
+        position: relative;
     }
     .inner-page .text-page .tab-content .text img{
         border-radius: 10px 10px 0 0;
+        max-width: none;
+        max-height: 200px;
+        right: 50%;
+        display: inline-block;
+        position: relative;
+        transform: translateX(50%);
     }
     .inner-page .text-page .tab-content .text p{
         padding: 30px 15px 0;
+    }
+    .inner-page .video .gallery .gallery-item .image{
+        border-radius: 10px 10px 0 0;
+    }
+    .inner-page .gallery .gallery-item:hover{
+        background: transparent;
+    }
+    .inner-page .gallery .gallery-item:hover:before{
+        display: none;
+    }
+    .inner-page .donate-page .panel-title span{
+        display: block;
+        overflow: hidden;
+    }
+    .inner-page .donate-page .payment-methods li:hover:before{
+        right: 50%;
+        margin-right: -50px;
+    }
+    .inner-page .donate-page .payment-methods li{
+        background: #f0f0f0;
+        border-radius: 5px;
+        text-align: right;
+    }
+    .inner-page .donate-page .payment-methods li .image{
+        background: transparent;
+        border-radius: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .project-intro .right-side--menu li:hover .right-side--menu__icon-arrow,
+    .project-intro .right-side--menu li.active .right-side--menu__icon-arrow{
+        display: none;
+    }
+
+    .project-intro .right-side--menu li:hover,
+    .project-intro .right-side--menu li.active {
+        background-color: #5bb45c;
+        color: #fff;
+    }
+
+    .project-intro .right-side--menu li:hover b,
+    .project-intro .right-side--menu li:hover small,
+    .project-intro .right-side--menu li.active b,
+    .project-intro .right-side--menu li.active small {
+        color: #fff;
+    }
+
+    .project-intro .right-side--menu > li:hover > a .svg-icon-book {
+        background: url("../svg/book-white.svg") no-repeat center;
+        background-size: 30px;
+    }
+    .project-intro .right-side--menu > li:hover > a .svg-icon-hat {
+        background: url("../svg/student-hat-white.svg") no-repeat center;
+        background-size: 30px;
+    }
+    .project-intro .right-side--menu > li:hover > a .svg-icon-doorman {
+        background: url("../svg/doorman-white.svg") no-repeat center;
+        background-size: 30px;
+    }
+    .project-intro .right-side--menu > li:hover > a .svg-icon-clinic {
+        background: url("../svg/clinic-white.svg") no-repeat center;
+        background-size: 30px;
+    }
+    .video-gallery .body-info{
+        background: url("../images/video-bg-mobile.png") no-repeat left center;
+        background-size: 35vh auto;
+    }
+    .news-container .news-slider .news-item .info .text{
+        font-size: 14px;
+        line-height:20px;
     }
 }
 
