@@ -124,8 +124,7 @@ $(function () {
         $('#' + el_id).collapse();
         if (panel_parent.hasClass('-z-index')) {
             panel_parent.removeClass('-z-index')
-        }
-        else {
+        } else {
             panel_parent.addClass('-z-index')
         }
     }).on('click', '#sidebarCollapse', function () {
@@ -189,6 +188,11 @@ $(function () {
     }
 
     makeHelpBox();
+
+    if ($(window).width() < 768) {
+        var index = $('.time-line .owl-item').index($('.time-line-item.doing').parent('.owl-item'));
+        $('.time-line.owl-carousel').trigger('to.owl.carousel', [index - 1, 500, true]);
+    }
 });
 // hide or show the main navbar base on page scroll : start
 // var header_height = $('header').height();
@@ -204,8 +208,7 @@ $(window).on("load resize scroll", function () {
             $('header .navbar > li > a').addClass('text-white');
             headerTag.addClass('smallHeader');
             // $('li.dropdown').removeClass("open");
-        }
-        else {
+        } else {
 
             $('header > .container').show();
             headerTag.removeClass('smallHeader');
@@ -244,8 +247,8 @@ $.fn.digitFormat = function () {
                 var arr = value.split('.');
                 console.log(arr);
                 value = arr[0]
-                        .replace(/\D/g, "")
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "." + arr[1];
+                    .replace(/\D/g, "")
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "." + arr[1];
                 return value;
             }
             return value

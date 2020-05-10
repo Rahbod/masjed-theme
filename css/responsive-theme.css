@@ -811,6 +811,7 @@
     .news-container .news-slider .news-item .info h3 {
         font-size: 20px;
         margin-bottom: 20px;
+        margin-top: 0;
     }
 
     .news-container .news-slider .news-item .info h3:after {
