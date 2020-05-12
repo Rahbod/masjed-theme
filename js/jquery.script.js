@@ -216,6 +216,16 @@ $(window).on("load resize scroll", function () {
 });
 // hide or show the main navbar base on page scroll : end
 
+$(window).on("scroll", function () {
+    var width = $(this).width();
+    if (width < 768) {
+        var scroll = $(window).scrollTop();
+        if (scroll > 200)
+            $('body').addClass('mobile-scrolled');
+        else
+            $('body').removeClass('mobile-scrolled');
+    }
+});
 
 $('#dismiss, .screen-overlay').on('click', function () {
     $('nav#sidebar').removeClass('active');
