@@ -144,6 +144,9 @@ $(function () {
         return false;
     }).on('click', '.bank-accounts li', function () {
         copyToClipboard($(this).find('.account-number input').attr('id'));
+    }).on('click', '.video-overlay', function () {
+        $(this).parent().find('video')[0].play();
+        $(this).remove();
     });
 
     $(window).on("load resize", function () {
